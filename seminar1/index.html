@@ -2,14 +2,258 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Editor Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+
+
+        h1 {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+
+        h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        .editor {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .editor-fav{
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgba(74, 238, 145, 0.27);
+        }
+        .editor-description{
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px 25px 5px 30px;
+            border-radius: 5px;
+            font-size: 11px;
+            background-color: #f6f3f3;
+        }
+
+
+        .editor-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .editor-text{
+            font-size: 11px;
+        }
+        .editor-text-bold{
+            font-size: 11px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .editor-image {
+            width: 50px;
+            border-radius: 5px;
+        }
+
+        .mac-button {
+            background-color: #f6f3f3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #333;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 6px 12px;
+            transition: background-color 0.3s;
+        }
+        .mac-button-fav {
+            background-color: #f6f3f3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #333;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 6px 12px;
+            transition: background-color 0.3s;
+        }
+
+        .mac-button:hover {
+            background-color: #e0e0e0;
+        }
+        .mac-button-fav:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+
+    <script>
+        function toggleDescription(editor) {
+            const description = editor.querySelector('.editor-description');
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
-    <main>
-        <header>
-            Hello
-        </header>
-        <a href="elaman.html">Link to Elaman </a>
-    </main>
+<header>
+    <h1>HTML Editor Comparison</h1>
+</header>
+<div class="container">
+    <h2>Overview</h2>
+    <ul>
+
+        <li>
+            <div class="editor-fav">
+                <img class="editor-image" src="images/webstorm.png" alt="WebStorm">
+                <h3 class="editor-title">WebStorm</h3>
+                <p>WebStorm is a powerful Integrated Development Environment (IDE)
+                    designed specifically for JavaScript, TypeScript, and related technologies.</p>
+                <button class="mac-button-fav" onclick="toggleDescription(this.parentElement)">Read More</button>
+                <div class="editor-description">
+                    <p class="editor-text">It is developed by JetBrains and offers a comprehensive set
+                        of tools for web development. WebStorm provides smart code completion,
+                        error detection, testing, debugging, and support for popular frameworks like React,
+                        Angular, and Vue.js.
+                    </p>
+
+                    <p class="editor-text-bold">Key Features:</p>
+                    <ul>
+                        <li> - Intelligent coding assistance</li>
+                        <li> - Seamless integration with version control systems</li>
+                        <li> - Debugging and testing tools</li>
+                        <li> - Built-in support for popular frameworks and libraries</li>
+                        <li> - Live editing and preview features</li>
+                        <li> - Requires a good hardware</li>
+                    </ul>
+
+                    <p class="editor-text-bold">It is my favourite one for front-end development.
+                        Because it simplifies the work</p>
+                </div>
+
+            </div>
+        </li>
+
+        <li>
+            <div class="editor">
+                <img class="editor-image" src="images/vscode.svg.png" alt="Visual Studio Code">
+                <h3 class="editor-title">Visual Studio Code</h3>
+                <p>Visual Studio Code, often abbreviated as VS Code,
+                    is a free and open-source code editor developed by Microsoft.</p>
+                <button class="mac-button" onclick="toggleDescription(this.parentElement)">Read More</button>
+                <div class="editor-description">
+                    <p class="editor-text">It provides a wide range of features including syntax highlighting,
+                        debugging support, version control, IntelliSense code completion,
+                        and extensions for customizing functionality. It supports various
+                        programming languages and is highly customizable to suit individual
+                        developer preferences.
+                    </p>
+
+                    <p class="editor-text-bold">Key Features:</p>
+                    <ul>
+                        <li> - Lightweight and fast</li>
+                        <li> - Integrated Git control</li>
+                        <li> - IntelliSense for code completion</li>
+                        <li> - Extensive library of extensions</li>
+                        <li> - Debugging support for various languages</li>
+                        </ul>
+                </div>
+            </div>
+        </li>
+
+
+
+
+
+        <li>
+            <div class="editor">
+                <img class="editor-image" src="images/sublime.png" alt="Sublime Text">
+                <h3 class="editor-title">Sublime Text</h3>
+                <p>Sublime Text is a sophisticated text editor that is popular among developers
+                    for its speed and simplicity.</p>
+                <button class="mac-button" onclick="toggleDescription(this.parentElement)">Read More</button>
+                <div class="editor-description">
+                    <p class="editor-text">It's known for its minimalistic user interface,
+                        but powerful features that allow for efficient code editing.
+                        Sublime Text supports multiple programming languages and can be extended
+                        through packages and themes.
+                    </p>
+
+                    <p class="editor-text-bold">Key Features:</p>
+                    <ul>
+                        <li> - Distraction-free mode</li>
+                        <li> - Powerful search and replace functionality</li>
+                        <li> - Highly customizable via packages</li>
+                        <li> - Multi-caret editing for simultaneous text changes</li>
+                        <li> - Cross-platform support</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+
+
+        <li>
+            <div class="editor">
+                <img class="editor-image" src="images/atom.jpg" alt="Atom">
+                <h3 class="editor-title">Atom</h3>
+                <p>Atom is an open-source text editor developed by GitHub.</p>
+                <button class="mac-button" onclick="toggleDescription(this.parentElement)">Read More</button>
+                <div class="editor-description">
+                    <p class="editor-text">It is designed to be highly customizable and is built around a core
+                        of packages that can be added and configured to suit individual needs. Atom is known
+                        for its user-friendly interface and robust support for web technologies.
+                    </p>
+
+                    <p class="editor-text-bold">Key Features:</p>
+                    <ul>
+                        <li> - Built-in package manager for easy customization</li>
+                        <li> - Smart autocompletion and syntax highlighting</li>
+                        <li> - Multiple panes for efficient multitasking</li>
+                        <li> - Git and GitHub integration</li>
+                        <li> - Also Cross-platform compatibility</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
 </body>
 </html>
