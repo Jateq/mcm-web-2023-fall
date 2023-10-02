@@ -1,0 +1,567 @@
+@keyframes fade-in {
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes fade-in-ch {
+    to {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+@keyframes appearance {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+/* .slide-up {
+    transform: translateY(100%);
+    animation: slideUpAnimation 1s forwards;
+} */
+
+
+
+body{
+    max-width: 100vw;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(230, 230, 230)
+}
+
+h1, h2, h3, p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div {
+    text-align: center;
+
+}
+
+img {
+    width: fit-content;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+i{
+    text-align: center;
+}
+button {
+    background-color: #f5f5f5; /* bg-amber-400 */
+    color: #000000; /* text-blue-300 */
+    transition: background-color 0.5s, color 0.5s;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #dcd8d8; /* hover:bg-blue-300 */
+    color: #000000; /* hover:text-amber-400 */
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a{
+    color: white;
+}
+
+
+
+.containerimg{
+    opacity: 0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    max-width: 1200px;
+    background-color: rgba(0,0,0, 0.3);
+    display: flex;
+    margin-bottom: 100px;
+    animation: appearance 0.5s 0.5s forwards;
+}
+
+.image{
+    max-width: 220px;
+}
+
+
+.containerh{
+    text-align: left;
+    margin-bottom: -10px;
+    padding: 0px 10px;
+}
+
+.txt{
+    text-align: left;
+    padding: 0px 20px;
+}
+
+.uttxt{
+    text-align: justify;
+    padding: 0px 20px;
+    max-width: 600px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 300px;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.marked-date {
+    background-color: red;
+    color: white;
+}
+
+.calendar{
+    margin-left: 70px;
+    margin-right: 70px;
+    width: 500px;
+}
+
+.containerthatappears{
+    opacity: 0;
+    margin-top: 55px;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: appearance 0.5s 0.5s forwards;
+
+
+}
+
+.containerthatappears-ch{
+    opacity: 0;
+    margin-top: 55px;
+    max-width: 1220px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: appearance 0.5s 0.5s forwards;
+
+}
+
+.containerthatappears-ch-a{
+    opacity: 0;
+    margin-top: 20px;
+    max-width: 1220px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: appearance 0.5s 0.5s forwards;
+
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container{
+    justify-content: start;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 1000px;
+
+}
+
+
+.bguldanaisbestgirl {
+    background-image: url("images/coastline-seashore-rocks-macos-big-sur-stock-5k-7680x4320-3994.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-landing{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+.container-landing-txt{
+    font-size: 50px;
+}
+.container-about{
+    font-size: 20px;
+    max-width: 1000px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-bottom: 40px;
+}
+
+.container-about:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+
+.travel{
+        margin: 100px auto;
+        justify-content: center;
+        max-width: 1000px;
+        padding: 10px;
+        background-color: rgba(255,255,255, 0.1);
+        border-radius: 5px;
+        transition: 0.3s;
+}
+
+.travel .head {
+    font-size: 30px;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.travel p {
+    text-align: justify;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.about{
+    margin: 220px auto;
+    justify-content: center;
+    max-width: 1000px;
+    padding: 10px;
+    /*background-color: rgba(255,255,255,0.1);*/
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.about:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+
+.svg-icon{
+    width: 22px;
+    height: auto;
+    padding: 0 0;
+    margin-right: 10px;
+
+}
+
+
+
+.about .head {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 30px;
+}
+.about .headtwo {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.about p {
+    text-align: left;
+    margin-left: 47px;
+    font-size: 20px;
+}
+
+
+
+/* .bguldanaisbestgirl::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.0);
+    animation: fade-in 1s 0.5s forwards;
+} */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.overlay-ch {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: -1;
+    animation: fade-in-ch 1s 0.5s  forwards;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    /*background-color: #d00d3a;*/
+    /*padding: 10px 20px;*/
+    border-radius: 10px;
+}
+
+.menu li:hover {
+    border-radius: 5px;
+    background-color: rgba(197,71,50,0.5);
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+    z-index: 100;
+}
+
+.dropdown {
+    background-color: rgba(197,71,50,255);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li + li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+.navbar {
+    position: fixed;
+    top: 5px;
+    left: 0;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-radius: 5px;
+    background-color: rgba(21, 124, 154, 0.9);
+    color: #fff;
+    z-index: 100;
+}
+
+.nav-links a {
+    display: flex;
+    color: #fff;
+    text-decoration:none
+}
+
+/* LOGO */
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    padding: 0 7px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+.logo:hover{
+    background-color: rgba(197,71,50,0.5);
+
+}
+.logo a{
+    text-decoration: none;
+}
+
+.try{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.btn-three {
+    color: white;
+    z-index: 100;
+    transition: all 0.5s;
+    position: relative;
+    padding: 10px 50px;
+    max-width: 150px;
+    margin: 0px auto;
+    background-color: rgba(21, 124, 154, 0.5);;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.btn-three::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: white;
+    background-color: rgba(21, 124, 154, 1);
+    transition: all 0.3s;
+}
+.btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(1,1);
+}
+.btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+.stays{
+    opacity: 0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+
+    animation: appearance 0.5s 0.5s forwards;
+}
+
+.stays-first{
+    opacity: 0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 90px auto 0;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    animation: appearance 0.5s 0.5s forwards;
+}
+
+
+.stays-last{
+    opacity: 0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto 100px;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    animation: appearance 0.5s 0.5s forwards;
+}
+
+h3{
+    text-align: start;
+    margin-left: 11px;
+}
+
+.stays-txt{
+    text-align: justify;
+    margin-left: 11px;
+}
+.page-main{
+    margin-top: 100px;
+    font-size: 35px;
+}
+
+.flights{
+    margin: 20px auto;
+    display: grid; /* Set display to grid */
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    max-width: 1000px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.flights-card{
+    margin: 10px auto;
+    max-width: 450px;
+    background-color: rgba(255,255,255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.flights img{
+    max-width: 500px;
+}
+
+.flights-button{
+        display: inline-block;
+        padding: 10px 40px;
+        font-size: 16px;
+        font-weight: bold;
+    border: none;
+        text-align: center;
+        text-decoration: none;
+    background-color: rgba(21, 124, 154, 1);
+        color: #ffffff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+
+}
+
+.flights-button:hover {
+    background-color: #1489d7;
+    color: white;
+}
