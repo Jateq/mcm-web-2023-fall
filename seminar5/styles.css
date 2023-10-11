@@ -51,7 +51,6 @@ div {
 }
 
 img {
-    width: fit-content;
     max-width: 100%;
 }
 
@@ -104,10 +103,47 @@ a{
     justify-items: center;
     align-content: center;
     align-items: center;
-    margin-bottom: 1000px;
-
+}
+.container-two {
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
 }
 
+.container-two-buy {
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.container-two-buy img {
+    width: 50%;
+    height: auto;
+    transition: 0.3s;
+}
+.container-two img {
+    width: 50%;
+    height: auto;
+    transition: 0.3s;
+}
+.container-two img:hover{
+    transform: scale(1.03);
+}
+.mac{
+    transition: 0.3s;
+}
+.mac:hover{
+    transform: scale(1.03);
+}
+.imac{
+    margin-top: 15px;
+    transition: 0.3s;
+}
+.imac:hover{
+    transform: scale(1.03);
+}
 
 .bg-image {
     background-image: url("images/coastline-seashore-rocks-macos-big-sur-stock-5k-7680x4320-3994.jpg");
@@ -140,10 +176,18 @@ a{
     transition: 0.3s;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 800px) {
+    .nav-list li:not(:first-child) {
+        display: none;
+    }
+}
+
 .navbar {
     backdrop-filter: blur(10px);
     background-color: rgba(29, 29, 31, 0.8);
     top: 0;
+    left: 0;
     width: 100%;
     position: fixed;
     z-index: 1000;
@@ -182,5 +226,10 @@ a{
 }
 
 .space{
-    margin-bottom: 1000px;
+    margin-bottom: 100px;
+}
+
+hr{
+    margin-top: 30px;
+    max-width: 1000px;
 }
