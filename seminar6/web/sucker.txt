@@ -1,0 +1,4 @@
+Uldana;discrete_math;4400430290239123;visa
+Uldana;discrete_math;4400430290239123;visa
+Temirlan;differential_equation;453463546346;mastercard
+Aliya;discrete_math;5400439243942345;mastercard

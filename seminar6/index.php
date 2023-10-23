@@ -1,3 +1,4 @@
+<!-- this file is located in the xampp/htdocs/web -->
 
 <!DOCTYPE html>
 <html>
