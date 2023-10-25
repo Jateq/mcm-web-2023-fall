@@ -10,6 +10,27 @@
 
 
     <?php
+
+    function isLuhnValid($number) {
+        $sum = 0;
+        $numDigits = strlen($number);
+        $parity = $numDigits % 2;
+
+        for ($i = $numDigits - 1; $i >= 0; $i--) {
+            $digit = (int)$number[$i];
+            if ($i % 2 == $parity) {
+                $digit *= 2;
+                if ($digit > 9) {
+                    $digit -= 9;
+                }
+            }
+            $sum += $digit;
+        }
+
+        return $sum % 10 == 0;
+    }
+
+
     if(isset($_POST["name"]) && isset($_POST["section"]) && isset($_POST["credit_card"]) && isset($_POST["payment_method"])) {
         $name = $_POST['name'];
         $section = $_POST['section'];
@@ -19,36 +40,43 @@
         if ($name !== "" && $section !== "" && $credit !== "" && $card_type !== "") {
             $credit_pattern = "/^([4-5]\d{3}-?\d{4}-?\d{4}-?\d{4})$/"; // Pattern for Visa and MasterCard
             if(preg_match($credit_pattern, $credit) && ($card_type == "visa" && ($credit[0] == 4)) || ($card_type == "mastercard" && ($credit[0] == 5))) {
-                $data = "$name;$section;$credit;$card_type\n";
+                if (isLuhnValid($credit)) {
+                    $data = "$name;$section;$credit;$card_type\n";
 
-                echo "
+                    echo "
                 <h1>Thanks, sucker!</h1>
                 <p>Your information has been recorded.</p>
                 ";
 
-                $file = fopen('sucker.txt', 'a'); //  'append' mode
+                    $file = fopen('sucker.txt', 'a'); //  'append' mode
 
-                fwrite($file, $data);
+                    fwrite($file, $data);
 
-                fclose($file);
+                    fclose($file);
+                } else{
+                    echo "
+                <h1>Do not fool us</h1>
+                <p>Luhn algorithm is not satisfied.</p>
+                ";
+                }
             }
             else{
                 echo "
                 <h1>Sorry</h1>
-                <p>You did not provide a valid card number. <a href='buyagrade.html'>Try again?</a></p> 
+                <p>You did not provide a valid card number. <a href='buyagrade.html'>Try again?</a></p>
                 ";
             }
 
         } else {
             echo "
                 <h1>Sorry</h1>
-                <p>You did not fill out the form completely. <a href='buyagrade.html'>Try again?</a></p> 
+                <p>You did not fill out the form completely. <a href='buyagrade.html'>Try again?</a></p>
                 ";
         }
     } else {
         echo "
                 <h1>Sorry</h1>
-                <p>You did not fill out the form completely. <a href='buyagrade.html'>Try again?</a></p> 
+                <p>You did not fill out the form completely. <a href='buyagrade.html'>Try again?</a></p>
                 ";
     }
     ?>
@@ -57,7 +85,8 @@
     if (isset($name) && isset($section) && isset($credit) && isset($card_type)) {
         $credit_pattern = "/^([4-5]\d{3}-?\d{4}-?\d{4}-?\d{4})$/"; //
         if ($name !== "" && $section !== "" && $credit !== "" && $card_type !== "" && (preg_match($credit_pattern, $credit)) && ($card_type == "visa" && ($credit[0] == 4)) || ($card_type == "mastercard" && ($credit[0] == 5))) {
-            echo "<dl>
+            if (isLuhnValid($credit)) {
+                echo "<dl>
                 <dt>Name</dt>
                 <dd>$name</dd>
                 <dt>Section</dt>
@@ -65,8 +94,8 @@
                 <dt>Credit Card</dt>
                 <dd>$credit ($card_type)</dd>
             </dl>";
-            echo "<dt>Here are all the suckers who have submitted here:</dt> <dl></dl>";
-            $file = fopen('sucker.txt', 'r'); // Open the file in 'read' mode
+                echo "<dt>Here are all the suckers who have submitted here:</dt> <dl></dl>";
+                $file = fopen('sucker.txt', 'r'); // Open the file in 'read' mode
 //
 //            if ($file) {
 //                while (($line = fgets($file)) !== false) {
@@ -74,11 +103,11 @@
 //                }
 //            }
 
-            $content = file_get_contents('sucker.txt');
+                $content = file_get_contents('sucker.txt');
 
-            echo $content;
-            fclose($file); // Close the file
-
+                echo $content;
+                fclose($file); // Close the file
+            }
         }
     }
     ?>
