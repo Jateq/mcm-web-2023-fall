@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Added transition property */
+    transform: translateX(-500%); /* Initially hide the navigation menu off-screen */
+}
+
+.nav-list.show {
+    transform: translateX(0); /* Show the navigation menu */
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.bar.cross1 {
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.bar.cross2 {
+    opacity: 0;
+}
+
+.bar.cross3 {
+    transform: rotate(-45deg) translate(6px, -5px);
+}
