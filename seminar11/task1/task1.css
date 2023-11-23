@@ -1,10 +1,40 @@
 body {
     font-family: 'Arial', sans-serif;
-    text-align: center;
     padding: 50px;
+    background-color: #1f2023;
+}
+
+#loading-container {
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    height: 50px;
+    background-color: #ffffff;
+    align-items: center;
+    overflow: hidden;
 }
 
 #loading-indicator {
-    font-size: 24px;
-    margin-bottom: 20px;
+    width: 0;
+    height: 100%;
+    background-color: #ba79f1;
+    animation: fill 1s linear ;
+    color: #fff;
+}
+
+#text{
+    margin-top: 40px;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+@keyframes fill {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }
