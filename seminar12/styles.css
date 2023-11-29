@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #1f2023;
+    color: #ffffff;
+}
+
+#game-canvas{
+    width: 30%;
+    height: 700px;
+}
+
+button{
+    margin-top: 15px;
+    padding: 10px 198px;
+    background-color: #ba79f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+button:hover{
+    color: #ff0000;
+    background-color: white;
+
+}
+
+#game-canvas{
+    border-radius: 5px;
+}
